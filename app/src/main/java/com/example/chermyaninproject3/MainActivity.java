@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if ((mStartDate >= mEndDate) || ((mStartDate == 0) || (mEndDate == 0))) {
                     Toast.makeText(MainActivity.this, "Ошибка. Введите вверные данные", Toast.LENGTH_LONG).show();
-                    mChooseStartDate.setText("Дата-время старта задачи:");
-                    mChooseEndDate.setText("Дата-время окончания задачи:");
+                    mChooseStartDate.setText(R.string.choose_StartDate);
+                    mChooseEndDate.setText(R.string.choose_EndDate);
                 } else {
-                    Toast.makeText(MainActivity.this, "старт: " + mStartDateTxt + " окончаниe: " + mEndDateTxt, Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.choose_StartDate) + mStartDateTxt + "\n" + getString(R.string.choose_EndDate) + mEndDateTxt, Toast.LENGTH_LONG).show();
                 }
             }
         });
